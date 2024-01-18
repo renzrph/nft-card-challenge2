@@ -1,0 +1,142 @@
+@import url("https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600&display=swap");
+
+:root {
+  --soft-blue: hsla(215, 52%, 70%, 0.903);
+  --cyan: hsl(178, 100%, 50%);
+  --cyan-hover: hsl(178, 100%, 50%, 55%);
+  --very-dark-blue-main-bg: hsl(217, 54%, 11%);
+  --very-dark-blue-card-bg: hsl(216, 50%, 16%);
+  --very-dark-blue-line: hsl(215, 32%, 27%);
+  --white: hsl(0, 0%, 100%);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: var(--very-dark-blue-main-bg);
+  display: grid;
+  place-items: center;
+  height: 100vh;
+  font-family: "Outfit", sans-serif;
+  min-width: 430px;
+  font-size: 1.2rem;
+}
+
+.container {
+  width: 375px;
+  height: 590px;
+  padding: 1.5rem;
+  background-color: var(--very-dark-blue-card-bg);
+  border-radius: 1rem;
+}
+
+.image-container {
+  position: relative;
+  border-radius: 1rem;
+}
+
+.image-container div {
+  position: absolute;
+  background-color: var(--cyan-hover);
+  top: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+}
+
+.image-container div:hover {
+  border-radius: 1rem;
+  opacity: 1;
+  cursor: pointer;
+}
+
+.image-container div img {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.equilibrium-image {
+  width: 100%;
+  height: 100%;
+  border-radius: 1rem;
+}
+
+.card-title {
+  color: var(--white);
+  margin: 1rem 0;
+  text-align: left;
+}
+
+.card-title:hover {
+  cursor: pointer;
+  color: var(--cyan);
+}
+
+.card-description {
+  color: var(--soft-blue);
+  text-align: justify;
+}
+
+.eth-value-days-container {
+  display: flex;
+  justify-content: space-between;
+  margin: 1rem 0;
+}
+
+.eth-value {
+  color: var(--cyan);
+  display: flex;
+  align-items: center;
+}
+
+.etherium-icon {
+  margin-right: 0.5rem;
+}
+
+.days-left {
+  color: var(--soft-blue);
+}
+
+.profile-image {
+  height: 30px;
+  width: 30px;
+  border: 1px solid var(--white);
+  border-radius: 50%;
+}
+
+.blue-line {
+  border: 0.5px solid var(--very-dark-blue-line);
+}
+
+.profile-container {
+  display: flex;
+
+  align-items: center;
+  padding: 1rem 0;
+}
+
+.profile-name {
+  color: var(--soft-blue);
+  margin-left: 0.5rem;
+}
+
+.profile-name span {
+  color: var(--white);
+}
+
+.profile-name span:hover {
+  color: var(--cyan);
+}
+
+/* Mobile view */
+@media (min-width: 600px) {
+  .container {
+    width: 360px;
+  }
+}
